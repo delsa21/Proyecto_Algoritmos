@@ -3,10 +3,7 @@ import time
 from typing import Tuple, List
 
 def longest_common_substring(s1: str, s2: str) -> Tuple[int, str]:
-    """
-    Encuentra el Substring Común Más Largo (LCSstr) entre dos cadenas.
-    Optimizado para usar menos memoria.
-    """
+    #encontramos el substring común más largo (LCSstr) entre dos cadenas.
     n, m = len(s1), len(s2)
     prev = [0] * (m + 1)
     max_len = 0
@@ -27,15 +24,13 @@ def longest_common_substring(s1: str, s2: str) -> Tuple[int, str]:
 
 
 def dividirBloques(texto: str, tamaño: int = 1000) -> List[str]:
-    """
-    Divide el texto en fragmentos de un tamaño específico.
-    """
+    #divide el texto en fragmentos de un tamaño específico.
     return [texto[i : i + tamaño] for i in range(0, len(texto), tamaño)]
 
 
 def main():
 
-    # lee los textos ya limpios (asegúrate de cambiar los nombres si tus archivos se llaman distinto)
+    # lee los textos ya limpios 
     try:
         with open("prideandprejudice_clean.txt", "r", encoding="utf-8") as f:
             texto1 = f.read()
