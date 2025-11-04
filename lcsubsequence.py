@@ -56,4 +56,6 @@ def main():
     print("Fragmento:", mejor_subseq[:300] + ("..." if len(mejor_subseq) > 300 else ""))
 
 
-main()
+if __name__ == "__main__":
+    main()
+
